@@ -6,13 +6,23 @@
 #include<vector>
 extern "C"
 
-namespace bptree{
+  class bptree{
   NodeType root*;
   int m;//子节点的最大数目
   int nodeCount;
   typedef vector<NodeType*> vec;
   typedef long int li;
+  
+  public:
+  void leftRotation(){
+  
+  }
 
+  void rightRotation(){
+  
+  }
+
+  }
   class bplusTree{  
    tydef struct { 
      int Count;
@@ -26,7 +36,7 @@ namespace bptree{
       
    }NodeType;
    
-   
+   public:  
    void deleteNode(){
    
    }
@@ -37,11 +47,16 @@ namespace bptree{
 	 tempNode -> isRoot = true;
 
      }
+     
+     else{
+           
+     }
    }
 
   void printTree(){
   
   }
+  friend class bptree;
 
  }
-}
+
