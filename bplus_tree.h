@@ -24,7 +24,7 @@ extern "C"
 
   }
   class bplusTree{  
-   tydef struct { 
+   typedef struct { 
      int Count;
      boolean isRoot;
      boolean isLeaf;
@@ -60,3 +60,4 @@ extern "C"
 
  }
 
+#endif
