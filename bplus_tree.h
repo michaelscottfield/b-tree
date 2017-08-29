@@ -1,29 +1,25 @@
-#ifndef BPLUS_NODE
-#define BPLUS_NODE
-
-#define NULL 0
 
 #include<vector>
+using namespace std;
 extern "C"
-
-    typedef struct { 
+   
+    typedef long int li;
+ 
+    typedef struct NodeType{ 
      int Count;
-     boolean isRoot;
-     boolean isLeaf;
+     bool isRoot;
+     bool isLeaf;
      int keyNum;//关键字数目
      int childNum;//子节点数目
-     NodeType* parent;
-     vec children;
      li  keys;
-      
-   }NodeType;
- 
+      NodeType *parent; 
+   }Node;
+
+   typedef vector<NodeType*> vec;
   class bptree{
-  NodeType root*;
+  NodeType* root;
   int m;//子节点的最大数目
   int nodeCount;
-  typedef vector<NodeType*> vec;
-  typedef long int li;
   
   public:
   void leftRotation(){
@@ -33,14 +29,12 @@ extern "C"
   void rightRotation(){
   
   }
-
-   
-   public:  
+  
    void deleteNode(){
    
    }
    
-   void insertNode(li key, bplusTree tree){
+   void insertNode(li key, bptree *tree){
      if (tree -> nodeCount == 0){
          NodeType *tempNode;
 	 tempNode -> isRoot = true;
@@ -56,6 +50,5 @@ extern "C"
   
   }
  
- }
+  };
 
-#endif
