@@ -6,6 +6,18 @@
 #include<vector>
 extern "C"
 
+    typedef struct { 
+     int Count;
+     boolean isRoot;
+     boolean isLeaf;
+     int keyNum;//关键字数目
+     int childNum;//子节点数目
+     NodeType* parent;
+     vec children;
+     li  keys;
+      
+   }NodeType;
+ 
   class bptree{
   NodeType root*;
   int m;//子节点的最大数目
@@ -22,19 +34,6 @@ extern "C"
   
   }
 
-  }
-  class bplusTree{  
-   typedef struct { 
-     int Count;
-     boolean isRoot;
-     boolean isLeaf;
-     int keyNum;//关键字数目
-     int childNum;//子节点数目
-     NodeType* parent;
-     vec children;
-     li  keys;
-      
-   }NodeType;
    
    public:  
    void deleteNode(){
@@ -56,8 +55,7 @@ extern "C"
   void printTree(){
   
   }
-  friend class bptree;
-
+ 
  }
 
 #endif
